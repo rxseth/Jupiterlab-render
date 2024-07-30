@@ -10,11 +10,6 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Install JupyterLab
-RUN pip install jupyter -U && pip install jupyterlab
+RUN pip install tmate
 
-# Expose port 8080
-EXPOSE 8080
-
-# Start JupyterLab on port 8080 without authentication
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8080", "--no-browser", "--allow-root", "--NotebookApp.token=''"]
-
+cmd tmate -F
