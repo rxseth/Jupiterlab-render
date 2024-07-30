@@ -11,3 +11,4 @@ RUN apt-get update && apt-get install -y \
 # Set the working directory
 WORKDIR /app
 
+RUN pip3 install jupyterlab
