@@ -5,9 +5,8 @@ FROM ubuntu:latest
 RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip
-    apt-get install tmate
+    tmate
     
 # Set the working directory
 WORKDIR /app
 
-cmd tmate -F
